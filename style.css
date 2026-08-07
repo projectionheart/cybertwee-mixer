@@ -214,8 +214,8 @@ main.lab {
 }
 
 .tube-slot {
-  --tube-w: 100px;
-  --tube-h: 280px;
+  --tube-w: 190px;
+  --tube-h: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,12 +233,15 @@ main.lab {
   text-shadow: 0 0 6px rgba(255, 47, 214, 0.6);
 }
 
-/* realistic test-tube silhouette: narrow cylinder, true rounded bottom */
+/* big, round glass silhouette: bottom radius always matches half the tube's width */
 .tube {
   width: var(--tube-w);
   height: var(--tube-h);
   position: relative;
-  border-radius: 6px 6px 50px 50px / 6px 6px 50px 50px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  border-bottom-left-radius: calc(var(--tube-w) / 2);
+  border-bottom-right-radius: calc(var(--tube-w) / 2);
   border: 1.5px solid rgba(0, 255, 242, 0.5);
   background:
     linear-gradient(100deg, rgba(255, 255, 255, 0.1) 0%, transparent 20%, transparent 75%, rgba(255, 255, 255, 0.05) 100%),
@@ -449,8 +452,8 @@ button:disabled {
 }
 
 .result-tube {
-  --tube-w: 140px;
-  --tube-h: 360px;
+  --tube-w: 260px;
+  --tube-h: 340px;
   border: 1.5px solid var(--cyan);
   box-shadow: 0 0 40px rgba(0, 255, 242, 0.35), inset 0 0 30px rgba(0, 0, 0, 0.5);
 }
@@ -535,8 +538,8 @@ footer {
 
 @media (max-width: 640px) {
   .tube-row { gap: 1.4rem; }
-  .tube-slot { --tube-w: 78px; --tube-h: 210px; }
-  .result-tube { --tube-w: 110px; --tube-h: 280px; }
+  .tube-slot { --tube-w: 140px; --tube-h: 190px; }
+  .result-tube { --tube-w: 190px; --tube-h: 250px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
