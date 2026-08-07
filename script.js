@@ -94,7 +94,7 @@ function wireSlot(tubeEl, fileInput, canvas, which) {
   tubeEl.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fileInput.click(); }
   });
-  tubeEl.addEventListener("dragover", (e) => { e.preventDefault(); tubeEl.style.outline = "2px dashed #edc478"; });
+  tubeEl.addEventListener("dragover", (e) => { e.preventDefault(); tubeEl.style.outline = "2px dashed #00fff2"; });
   tubeEl.addEventListener("dragleave", () => { tubeEl.style.outline = "none"; });
   tubeEl.addEventListener("drop", async (e) => {
     e.preventDefault();
@@ -110,7 +110,7 @@ function wireSlot(tubeEl, fileInput, canvas, which) {
 
 async function handleFile(file, canvas, tubeEl, which) {
   if (!file.type.startsWith("image/")) {
-    showToast("alas, that is not an image, dear correspondent");
+    showToast("that's not an image bestie 💔");
     return;
   }
   try {
@@ -119,7 +119,7 @@ async function handleFile(file, canvas, tubeEl, which) {
     previewInTube(canvas, tubeEl, img);
     updateButtonStates();
   } catch {
-    showToast("the plate could not be read; pray, try again");
+    showToast("couldn't read that file, try again ✨");
   }
 }
 
@@ -184,7 +184,7 @@ function applyColorFilter(ctx, canvas, w, h, amount) {
   temp.height = h;
   temp.getContext("2d").drawImage(canvas, 0, 0);
   ctx.clearRect(0, 0, w, h);
-  ctx.filter = `sepia(${25 + amount / 2}%) saturate(${105 + amount / 5}%) contrast(${100 + amount / 3}%) brightness(${96 - amount / 10}%)`;
+  ctx.filter = `saturate(${100 + amount}%) hue-rotate(${amount * 1.1}deg) contrast(${100 + amount / 3}%)`;
   ctx.drawImage(temp, 0, 0);
   ctx.filter = "none";
 }
@@ -208,7 +208,7 @@ function pickBlendMode() {
 
 function runMix() {
   if (!state.imgA || !state.imgB) {
-    showToast("two specimens are required before combination");
+    showToast("need two sources loaded bestie 🧪");
     return;
   }
 
@@ -258,7 +258,7 @@ function spawnSparkles(count) {
     const y = Math.random() * rect.height;
     s.style.left = `${x}px`;
     s.style.top = `${y}px`;
-    const hue = ["#f2c879", "#edc478", "#c9973f", "#b56a3c", "#a8543a"][Math.floor(Math.random() * 5)];
+    const hue = ["#ff2fd6", "#00fff2", "#39ff14", "#b026ff", "#faff00"][Math.floor(Math.random() * 5)];
     s.style.background = hue;
     s.style.animationDelay = `${Math.random() * 0.3}s`;
     sparkleLayer.appendChild(s);
@@ -285,7 +285,7 @@ accelerateBtn.addEventListener("click", () => {
   accelVal.textContent = state.acceleration;
   runMix();
   if (state.acceleration >= 100) {
-    showToast("the reaction has reached its utmost intensity");
+    showToast("maximum velocity achieved 💥⚡");
   }
 });
 
@@ -294,7 +294,7 @@ downloadBtn.addEventListener("click", () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "laboratory-specimen.png";
+    a.download = "cybertwee-mashup.png";
     a.click();
     URL.revokeObjectURL(url);
   });

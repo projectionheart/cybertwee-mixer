@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>cybertwee accelerationist dashboard</title>
-<meta name="description" content="combine two visual specimens in a brass-and-glass alchemy apparatus, lit by lamplight.">
+<meta name="description" content="mix two visual sources into a cute glitchy mashup. test tubes, blend modes, chaos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="crt-overlay"></div>
-<div class="lamp-glow"></div>
+<div class="grid-floor"></div>
 
 <header>
-  <p class="plate-number">Plate No. 1</p>
-  <h1 class="glitch-title" data-text="Cybertwee Accelerationist Dashboard">Cybertwee Accelerationist Dashboard</h1>
-  <p class="tagline">combine &middot; observe &middot; record <span aria-hidden="true">❧</span></p>
+  <p class="plate-number">[ accelerant.exe // booting ]</p>
+  <h1 class="glitch-title" data-text="CYBERTWEE ACCELERATIONIST DASHBOARD">CYBERTWEE ACCELERATIONIST DASHBOARD</h1>
+  <p class="tagline">mix. mutate. accelerate. <span aria-hidden="true">💗⚡🧪</span></p>
 </header>
 
 <main class="lab">
@@ -25,52 +25,52 @@
   <section class="tube-row">
 
     <div class="tube-slot" id="slotA">
-      <label class="tube-label">Specimen A</label>
-      <div class="tube" id="tubeA" role="button" tabindex="0" aria-label="Upload specimen A image">
+      <label class="tube-label">Source A</label>
+      <div class="tube" id="tubeA" role="button" tabindex="0" aria-label="Upload source A image">
         <div class="tube-rim"></div>
         <canvas class="tube-canvas" id="canvasA"></canvas>
         <div class="tube-bubbles">
           <span></span><span></span><span></span><span></span><span></span>
         </div>
-        <div class="tube-placeholder">affix specimen<br>A here</div>
+        <div class="tube-placeholder">tap 2 add<br>source A ✨</div>
       </div>
       <input type="file" accept="image/*" id="fileA" hidden>
     </div>
 
     <div class="mix-controls">
       <div class="control">
-        <label for="blendMode">method of combination</label>
+        <label for="blendMode">blend mode</label>
         <select id="blendMode">
-          <option value="random" selected>at the chemist's whim</option>
-          <option value="screen">screen — luminous</option>
-          <option value="multiply">multiply — deepened</option>
-          <option value="difference">difference — contrasted</option>
-          <option value="overlay">overlay — tempered</option>
-          <option value="color-dodge">color-dodge — brightened</option>
-          <option value="exclusion">exclusion — inverted</option>
-          <option value="soft-light">soft-light — gentled</option>
-          <option value="hard-light">hard-light — vivid</option>
+          <option value="random" selected>✨ random chaos</option>
+          <option value="screen">screen</option>
+          <option value="multiply">multiply</option>
+          <option value="difference">difference</option>
+          <option value="overlay">overlay</option>
+          <option value="color-dodge">color-dodge</option>
+          <option value="exclusion">exclusion</option>
+          <option value="soft-light">soft-light</option>
+          <option value="hard-light">hard-light</option>
         </select>
       </div>
 
       <div class="control">
-        <label for="accel">reaction intensity <span id="accelVal">30</span>%</label>
+        <label for="accel">acceleration <span id="accelVal">30</span>%</label>
         <input type="range" id="accel" min="0" max="100" value="30">
       </div>
 
-      <button id="mixBtn" class="mix-btn">⚗ Combine Specimens ⚗</button>
-      <button id="accelerateBtn" class="accelerate-btn" disabled>✒ Intensify Reaction</button>
+      <button id="mixBtn" class="mix-btn">⚗️ MIX IT ⚗️</button>
+      <button id="accelerateBtn" class="accelerate-btn" disabled>💥 ACCELERATE MORE</button>
     </div>
 
     <div class="tube-slot" id="slotB">
-      <label class="tube-label">Specimen B</label>
-      <div class="tube" id="tubeB" role="button" tabindex="0" aria-label="Upload specimen B image">
+      <label class="tube-label">Source B</label>
+      <div class="tube" id="tubeB" role="button" tabindex="0" aria-label="Upload source B image">
         <div class="tube-rim"></div>
         <canvas class="tube-canvas" id="canvasB"></canvas>
         <div class="tube-bubbles">
           <span></span><span></span><span></span><span></span><span></span>
         </div>
-        <div class="tube-placeholder">affix specimen<br>B here</div>
+        <div class="tube-placeholder">tap 2 add<br>source B ✨</div>
       </div>
       <input type="file" accept="image/*" id="fileB" hidden>
     </div>
@@ -84,12 +84,12 @@
       <div class="tube-bubbles">
         <span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
-      <div class="tube-placeholder" id="resultPlaceholder">the resulting compound<br>shall appear here</div>
+      <div class="tube-placeholder" id="resultPlaceholder">your mashup<br>appears here</div>
       <div class="sparkle-layer" id="sparkleLayer"></div>
     </div>
     <div class="result-actions">
-      <button id="remixBtn" disabled>↻ Recombine</button>
-      <button id="downloadBtn" disabled>⬇ Preserve Plate</button>
+      <button id="remixBtn" disabled>↻ mix again</button>
+      <button id="downloadBtn" disabled>⬇ download</button>
     </div>
   </section>
 
@@ -98,7 +98,7 @@
 <div class="toast" id="toast"></div>
 
 <footer>
-  <p>recorded with claude code &middot; preserved as a static specimen on github pages</p>
+  <p>built with claude code &middot; static &amp; served on github pages ⚡💾✨</p>
 </footer>
 
 <script src="script.js"></script>
