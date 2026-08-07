@@ -11,6 +11,14 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="flaskClip" clipPathUnits="objectBoundingBox">
+      <path d="M0.38,0 L0.62,0 L0.62,0.30 L0.38,0.30 Z M0.5,0.20 C0.7209,0.20 0.90,0.3791 0.90,0.60 C0.90,0.8209 0.7209,1.00 0.5,1.00 C0.2791,1.00 0.10,0.8209 0.10,0.60 C0.10,0.3791 0.2791,0.20 0.5,0.20 Z" />
+    </clipPath>
+  </defs>
+</svg>
+
 <div class="crt-overlay"></div>
 <div class="grid-floor"></div>
 
@@ -28,6 +36,9 @@
       <label class="tube-label">Source A</label>
       <div class="tube" id="tubeA" role="button" tabindex="0" aria-label="Upload source A image">
         <div class="tube-rim"></div>
+        <svg class="tube-outline" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0.38,0 L0.62,0 L0.62,0.30 L0.38,0.30 Z M0.5,0.20 C0.7209,0.20 0.90,0.3791 0.90,0.60 C0.90,0.8209 0.7209,1.00 0.5,1.00 C0.2791,1.00 0.10,0.8209 0.10,0.60 C0.10,0.3791 0.2791,0.20 0.5,0.20 Z" />
+        </svg>
         <canvas class="tube-canvas" id="canvasA"></canvas>
         <div class="tube-bubbles">
           <span></span><span></span><span></span><span></span><span></span>
@@ -66,6 +77,9 @@
       <label class="tube-label">Source B</label>
       <div class="tube" id="tubeB" role="button" tabindex="0" aria-label="Upload source B image">
         <div class="tube-rim"></div>
+        <svg class="tube-outline" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0.38,0 L0.62,0 L0.62,0.30 L0.38,0.30 Z M0.5,0.20 C0.7209,0.20 0.90,0.3791 0.90,0.60 C0.90,0.8209 0.7209,1.00 0.5,1.00 C0.2791,1.00 0.10,0.8209 0.10,0.60 C0.10,0.3791 0.2791,0.20 0.5,0.20 Z" />
+        </svg>
         <canvas class="tube-canvas" id="canvasB"></canvas>
         <div class="tube-bubbles">
           <span></span><span></span><span></span><span></span><span></span>
@@ -80,6 +94,9 @@
   <section class="result-row">
     <div class="tube result-tube" id="resultTube">
       <div class="tube-rim"></div>
+      <svg class="tube-outline" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0.38,0 L0.62,0 L0.62,0.30 L0.38,0.30 Z M0.5,0.20 C0.7209,0.20 0.90,0.3791 0.90,0.60 C0.90,0.8209 0.7209,1.00 0.5,1.00 C0.2791,1.00 0.10,0.8209 0.10,0.60 C0.10,0.3791 0.2791,0.20 0.5,0.20 Z" />
+      </svg>
       <canvas class="tube-canvas" id="resultCanvas" width="500" height="500"></canvas>
       <div class="tube-bubbles">
         <span></span><span></span><span></span><span></span><span></span><span></span>
