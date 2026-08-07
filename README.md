@@ -1,6 +1,6 @@
 # cybertwee accelerationist dashboard 🧪💗
 
-A cute-but-chaotic visual mixer. Drop an image into Source A, drop another into Source B, pick a blend mode (or leave it on random chaos), crank the acceleration slider, and hit **MIX IT**. The two sources blend, glitch, chroma-shift, and pixelate into a mashup you can keep remixing or download as a PNG.
+A brass-and-glass alchemy apparatus for mixing images. Affix a specimen into slot A, another into slot B, choose a method of combination (or leave it to the chemist's whim), turn up the reaction intensity, and press **Combine Specimens**. The two specimens blend, chroma-shift, and sepia-tone into a compound you can keep recombining or preserve as a PNG plate.
 
 Pure static HTML/CSS/JS — no build step, no server, no dependencies beyond one Google Fonts link. Runs entirely in the browser, so it's a perfect fit for GitHub Pages.
 
@@ -54,6 +54,6 @@ Then just describe changes in plain language — new blend effects, different tu
 
 ## Files
 
-- `index.html` — structure: two source tubes, controls, result tube
-- `style.css` — cybertwee visual language: glass test tubes, glitch title, neon pastel palette
-- `script.js` — the mixing engine: canvas blend modes, chroma shift, glitch slices, pixelation, sparkles
+- `index.html` — structure: two specimen tubes, controls, result tube
+- `style.css` — 1890s workshop visual language: dark wood, brass-rimmed glass tubes, lamplight glow, engraved brass title
+- `script.js` — the mixing engine: canvas blend modes, chroma shift, glitch slices, pixelation, spark sparkles
